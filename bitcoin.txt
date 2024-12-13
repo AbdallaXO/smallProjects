@@ -1,0 +1,25 @@
+# This Python script retrieves the current Bitcoin price from the Coindesk API,
+# converts it to USD, and calculates the USD value for a user-specified amount
+# of Bitcoin.
+
+# Functions:
+#   - main(): Entry point, calls other functions and prints the result.
+#   - get_api(): Fetches the current Bitcoin price in USD from Coindesk API.
+#   - return_argv(): Validates user input from the command line, ensuring it's
+#                    a positive number. Exits if invalid input is provided.
+#   - return_btc(): Calculates the USD value based on the user-requested amount
+#                    of Bitcoin and the retrieved price.
+
+# Command Line Usage:
+# python bitcoin_price.py <amount> (where <amount> is a positive number)
+
+# Example Output:
+# $12,345.6789 (if Bitcoin price is $12,345.6789 and user requests 1 BTC)
+
+# Error Handling:
+# - Exits with code 1 if API request fails or user input is invalid.
+
+# Libraries:
+# - requests: Used to make HTTP requests to the Coindesk API.
+# - json: Used to parse the JSON response from the API.
+# - sys: Used for command-line arguments and exit status.
